@@ -2,7 +2,7 @@ name: Log Github Action run times
 
 on:
   schedule:
-    - cron: "15 * 24 9 *"
+    - cron: "*/15 * 24 9 *"
 
 jobs:
   scheduled:
@@ -18,12 +18,12 @@ jobs:
 
       - name: Log execution time
         run: |-
-          timestamp = $(date -u)
+          timestamp=$(date -u)
           echo "Executed: ${timestamp} by ${{github.run_id}}" >> actions-log.txt
 
       - name: Commit changes
         run: |-
           git add .
-          timestamp = $(date -u)
+          timestamp=$(date -u)
           git commit -m "Update latest execution run: ${timestamp}"
           git push
