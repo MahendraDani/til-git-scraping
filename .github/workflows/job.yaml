@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "*/7 * * * *"
+      timezone: "Asia/Kolkata"
 
 permissions: 
   contents: write
