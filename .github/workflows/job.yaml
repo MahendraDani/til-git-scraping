@@ -1,8 +1,9 @@
 name: Log Github Action run times
 
 on:
+  workflow_dispatch:
   schedule:
-    - cron: "*/15 * 24 9 *"
+    - cron: "*/7 * * * *"
 
 jobs:
   scheduled:
