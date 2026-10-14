@@ -2,9 +2,9 @@ name: Log Github Action run times
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "*/7 * * * *"
-      timezone: "Asia/Kolkata"
+#  schedule:
+#    - cron: "*/7 * * * *"
+#      timezone: "Asia/Kolkata"
 
 permissions: 
   contents: write
